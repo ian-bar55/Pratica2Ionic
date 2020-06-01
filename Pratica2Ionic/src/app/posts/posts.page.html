@@ -5,5 +5,14 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-progress-bar *ngIf="exibeBarra" color="primary" [value]="valordabarra"></ion-progress-bar>
+  <ion-card>]
+    
+  </ion-card>
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>
